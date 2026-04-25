@@ -1,5 +1,11 @@
 import { useEffect } from "react";
 
+type SEOProps = {
+  title?: string;
+  description?: string;
+  canonical?: string;
+};
+
 const json = {
   "@context": "https://schema.org",
   "@graph": [
@@ -61,8 +67,32 @@ const json = {
   ],
 };
 
-export const SEO = () => {
+const setMeta = (selector: string, attr: string, value: string) => {
+  let el = document.head.querySelector<HTMLMetaElement | HTMLLinkElement>(selector);
+  if (!el) {
+    if (selector.startsWith("link")) {
+      el = document.createElement("link");
+      (el as HTMLLinkElement).rel = "canonical";
+    } else {
+      el = document.createElement("meta");
+      const name = selector.match(/\[(name|property)="([^"]+)"\]/);
+      if (name) (el as HTMLMetaElement).setAttribute(name[1], name[2]);
+    }
+    document.head.appendChild(el);
+  }
+  el.setAttribute(attr, value);
+};
+
+export const SEO = ({ title, description, canonical }: SEOProps = {}) => {
   useEffect(() => {
+    if (title) document.title = title;
+    if (description) {
+      setMeta('meta[name="description"]', "content", description);
+      setMeta('meta[property="og:description"]', "content", description);
+    }
+    if (title) setMeta('meta[property="og:title"]', "content", title);
+    if (canonical) setMeta('link[rel="canonical"]', "href", canonical);
+
     const id = "ld-home";
     let el = document.getElementById(id) as HTMLScriptElement | null;
     if (!el) {
@@ -72,9 +102,6 @@ export const SEO = () => {
       document.head.appendChild(el);
     }
     el.textContent = JSON.stringify(json);
-    return () => {
-      el?.remove();
-    };
-  }, []);
+  }, [title, description, canonical]);
   return null;
 };

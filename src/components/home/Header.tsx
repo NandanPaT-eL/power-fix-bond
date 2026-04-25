@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Logo } from "./Logo";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#products", label: "Products" },
-  { href: "#contact", label: "Contact" },
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/products", label: "Products" },
+  { to: "/contact", label: "Contact" },
 ];
 
 export const Header = () => {
@@ -15,18 +16,23 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
       <div className="container flex h-16 items-center justify-between">
-        <a href="#home" aria-label="Power-Fix-O home">
+        <Link to="/" aria-label="Power-Fix-O home">
           <Logo />
-        </a>
+        </Link>
         <nav className="hidden md:flex items-center gap-8" aria-label="Primary">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+            <NavLink
+              key={l.to}
+              to={l.to}
+              end={l.to === "/"}
+              className={({ isActive }) =>
+                `text-sm font-medium transition-colors ${
+                  isActive ? "text-primary" : "text-foreground/80 hover:text-primary"
+                }`
+              }
             >
               {l.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
         <div className="hidden md:block">
@@ -49,14 +55,15 @@ export const Header = () => {
         <div className="md:hidden border-t border-border bg-background">
           <nav className="container flex flex-col py-4 gap-3" aria-label="Mobile">
             {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
+              <NavLink
+                key={l.to}
+                to={l.to}
+                end={l.to === "/"}
                 onClick={() => setOpen(false)}
                 className="text-sm font-medium py-2 text-foreground/80"
               >
                 {l.label}
-              </a>
+              </NavLink>
             ))}
             <Button asChild>
               <a href="tel:+918200749227">

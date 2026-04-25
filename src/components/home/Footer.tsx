@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone, Globe } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 
 export const Footer = () => (
@@ -14,10 +15,10 @@ export const Footer = () => (
       <div>
         <h3 className="text-sm font-semibold uppercase tracking-wider text-white/90">Quick Links</h3>
         <ul className="mt-4 space-y-2 text-sm text-white/70">
-          <li><a href="#home" className="hover:text-white">Home</a></li>
-          <li><a href="#about" className="hover:text-white">About Us</a></li>
-          <li><a href="#products" className="hover:text-white">Products</a></li>
-          <li><a href="#contact" className="hover:text-white">Contact</a></li>
+          <li><Link to="/" className="hover:text-white">Home</Link></li>
+          <li><Link to="/about" className="hover:text-white">About Us</Link></li>
+          <li><Link to="/products" className="hover:text-white">Products</Link></li>
+          <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
         </ul>
       </div>
       <div>
