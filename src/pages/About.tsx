@@ -4,6 +4,7 @@ import { AboutIntro } from "@/components/home/AboutIntro";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { Leadership } from "@/components/home/Leadership";
 import { CTASection } from "@/components/home/CTASection";
+import { Certifications } from "@/components/home/Certifications";
 import { SEO } from "@/components/home/SEO";
 
 const About = () => (
@@ -25,6 +26,7 @@ const About = () => (
       </section>
       <AboutIntro />
       <WhyChooseUs />
+      <Certifications />
       <Leadership />
       <CTASection />
     </main>
