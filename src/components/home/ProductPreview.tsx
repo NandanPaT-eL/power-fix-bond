@@ -54,7 +54,7 @@ export const ProductPreview = () => (
           </h2>
         </div>
         <a
-          href="#contact"
+          href="/contact"
           className="inline-flex items-center gap-2 font-semibold text-primary hover:gap-3 transition-all"
         >
           Request a quote <ArrowRight className="h-4 w-4" />

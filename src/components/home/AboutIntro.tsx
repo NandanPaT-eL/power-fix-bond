@@ -30,7 +30,7 @@ export const AboutIntro = () => (
           industrial projects.
         </p>
         <a
-          href="#products"
+          href="/products"
           className="mt-6 inline-flex items-center gap-2 font-semibold text-primary hover:gap-3 transition-all"
         >
           Explore the Power-Fix-O range <ArrowRight className="h-4 w-4" />
