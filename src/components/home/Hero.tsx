@@ -1,6 +1,7 @@
 import { ArrowRight, ShieldCheck, Award, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import pf55 from "@/assets/pf55-bag.jpeg";
+import brandPoster from "@/assets/brand-poster.jpeg";
 
 export const Hero = () => (
   <section
@@ -25,12 +26,12 @@ export const Hero = () => (
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild size="lg">
-            <a href="#products">
+            <Link to="/products">
               View Products <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
+            </Link>
           </Button>
           <Button asChild size="lg" variant="outline">
-            <a href="#contact">Contact Us</a>
+            <Link to="/contact">Contact Us</Link>
           </Button>
         </div>
         <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
@@ -52,13 +53,13 @@ export const Hero = () => (
           aria-hidden="true"
         />
         <img
-          src={pf55}
-          alt="Power-Fix-O PF55 premium polymer-based tile adhesive 20Kg bag for floor and wall installation"
-          className="relative mx-auto max-h-[560px] w-auto object-contain drop-shadow-2xl"
+          src={brandPoster}
+          alt="Power-Fix-O — Your World, Bonded Beautifully. Tile adhesive, grout, epoxy, waterproofing, wall putty and more by Mittal Brothers Petrochem."
+          className="relative mx-auto max-h-[620px] w-auto object-contain rounded-3xl shadow-2xl"
           loading="eager"
           fetchPriority="high"
-          width={600}
-          height={800}
+          width={900}
+          height={1200}
         />
       </div>
     </div>
