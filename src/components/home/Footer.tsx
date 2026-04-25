@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Globe } from "lucide-react";
+import { Mail, MapPin, Phone, Globe, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 
@@ -6,7 +6,7 @@ export const Footer = () => (
   <footer className="bg-brand-ink text-white">
     <div className="container py-14 grid gap-10 md:grid-cols-4">
       <div className="md:col-span-2">
-        <Logo />
+        <Logo variant="onDark" />
         <p className="mt-4 text-sm text-white/70 max-w-sm leading-relaxed">
           Power-Fix-O by Mittal Brothers Petrochem — premium polymer-based tile adhesives
           manufactured in Gujarat for floor and wall applications across India.
@@ -34,7 +34,19 @@ export const Footer = () => (
     <div className="border-t border-white/10">
       <div className="container py-5 text-xs text-white/50 flex flex-col md:flex-row gap-2 md:items-center md:justify-between">
         <p>© {new Date().getFullYear()} Mittal Brothers Petrochem. All rights reserved.</p>
-        <p>Brand: POWER-FIX-O · Manufactured in Gujarat, India</p>
+        <p className="flex items-center gap-1.5">
+          Designed by
+          <a
+            href="https://wa.me/918980809394"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-white/80 hover:text-white transition-colors"
+            aria-label="Chat with Harsh Patel on WhatsApp"
+          >
+            <span className="font-semibold">Harsh Patel</span>
+            <MessageCircle className="h-3.5 w-3.5 text-[#25D366]" aria-hidden="true" />
+          </a>
+        </p>
       </div>
     </div>
   </footer>
