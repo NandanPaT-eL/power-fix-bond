@@ -68,11 +68,11 @@ export const ProductPreview = () => (
             className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1"
             style={{ boxShadow: "var(--shadow-card)" }}
           >
-            <div className={`relative h-56 ${p.accent} flex items-center justify-center overflow-hidden`}>
+            <div className="relative h-56 overflow-hidden bg-white">
               <img
                 src={p.image}
                 alt={`Power-Fix-O ${p.name} ${p.tag} 20Kg bag`}
-                className="max-h-52 w-auto object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />
             </div>

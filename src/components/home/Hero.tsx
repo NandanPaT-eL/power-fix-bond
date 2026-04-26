@@ -1,7 +1,7 @@
 import { ArrowRight, ShieldCheck, Award, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import brandPoster from "@/assets/brand-poster.jpeg";
+import brandPoster from "@/assets/brand-poster.jpg";
 
 export const Hero = () => (
   <section

@@ -2,10 +2,10 @@ import { Header } from "@/components/home/Header";
 import { Footer } from "@/components/home/Footer";
 import { CTASection } from "@/components/home/CTASection";
 import { SEO } from "@/components/home/SEO";
-import pf22 from "@/assets/pf22-bag.jpeg";
-import pf44 from "@/assets/pf44-bag.jpeg";
-import pf55 from "@/assets/pf55-bag.jpeg";
-import pf111 from "@/assets/pf111-bag.jpeg";
+import pf22 from "@/assets/pf22.png";
+import pf44 from "@/assets/pf44.png";
+import pf55 from "@/assets/pf55.png";
+import pf111 from "@/assets/pf111.png";
 import tileGrout from "@/assets/tile-grout-bucket.jpeg";
 import epoxyGrout from "@/assets/epoxy-grout-label.jpeg";
 import whiteGrout from "@/assets/white-grout-1kg.jpeg";
@@ -111,11 +111,11 @@ const ProductCard = ({ p }: { p: Product }) => (
     style={{ boxShadow: "var(--shadow-card)" }}
   >
     {p.image && (
-      <div className={`relative h-64 ${p.accent} flex items-center justify-center overflow-hidden`}>
+      <div className="relative h-64 overflow-hidden bg-white">
         <img
           src={p.image}
           alt={`Power-Fix-O ${p.name} — ${p.tag}`}
-          className="max-h-60 w-auto object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
         />
       </div>
