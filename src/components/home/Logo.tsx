@@ -1,22 +1,19 @@
+import logoSrc from "@/assets/powerfixo-logo.png";
+
 type LogoProps = {
   className?: string;
   variant?: "default" | "onDark";
 };
 
 export const Logo = ({ className = "", variant = "default" }: LogoProps) => {
-  const isOnDark = variant === "onDark";
-  const sideClasses = isOnDark
-    ? "bg-white text-brand-ink"
-    : "bg-brand-ink text-white";
-  const middleClasses = "bg-brand-blue text-white";
   return (
-    <div
-      className={`inline-flex items-center font-extrabold tracking-tight select-none ${className}`}
-      aria-label="Power-Fix-O"
-    >
-      <span className={`${sideClasses} px-2 py-1 rounded-l-md`}>POWER</span>
-      <span className={`${middleClasses} px-2 py-1`}>-FIX-</span>
-      <span className={`${sideClasses} px-2 py-1 rounded-r-md`}>O</span>
-    </div>
+    <img
+      src={logoSrc}
+      alt="Power-Fix-O"
+      className={`h-10 w-auto select-none ${
+        variant === "onDark" ? "drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]" : ""
+      } ${className}`}
+      draggable={false}
+    />
   );
 };
