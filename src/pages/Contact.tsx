@@ -15,7 +15,7 @@ const Contact = () => (
       <section className="bg-muted/40 border-b border-border">
         <div className="container py-14 lg:py-20">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">Contact</p>
-          <h1 className="mt-3 text-4xl md:text-5xl font-extrabold text-brand-ink max-w-3xl leading-tight">
+          <h1 className="mt-3 text-4xl md:text-5xl font-extrabold text-brand-ink leading-tight">
             Get in touch with the Power-Fix-O team.
           </h1>
         </div>

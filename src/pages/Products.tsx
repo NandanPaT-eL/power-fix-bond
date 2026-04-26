@@ -167,10 +167,10 @@ const Products = () => (
       <section className="bg-muted/40 border-b border-border">
         <div className="container py-14 lg:py-20">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">Our Products</p>
-          <h1 className="mt-3 text-4xl md:text-5xl font-extrabold text-brand-ink max-w-3xl leading-tight">
+          <h1 className="mt-3 text-4xl md:text-5xl font-extrabold text-brand-ink leading-tight">
             Tile adhesives, grouts & construction chemicals — engineered to bond.
           </h1>
-          <p className="mt-5 text-lg text-muted-foreground max-w-2xl">
+          <p className="mt-5 text-lg text-muted-foreground">
             Power-Fix-O by Mittal Brothers Petrochem offers a complete portfolio for tilers,
             contractors and builders — from cementitious tile adhesives to epoxy grouts and
             waterproofing solutions. All products comply with EN 12004, ANSI A118 and IS 15477 standards.
