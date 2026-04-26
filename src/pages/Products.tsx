@@ -110,7 +110,7 @@ const ProductCard = ({ p }: { p: Product }) => (
     className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1"
     style={{ boxShadow: "var(--shadow-card)" }}
   >
-    {p.image ? (
+    {p.image && (
       <div className={`relative h-64 ${p.accent} flex items-center justify-center overflow-hidden`}>
         <img
           src={p.image}
@@ -119,8 +119,6 @@ const ProductCard = ({ p }: { p: Product }) => (
           loading="lazy"
         />
       </div>
-    ) : (
-      <div className={`relative h-32 ${p.accent}`} aria-hidden="true" />
     )}
     <div className="p-6">
       <div className="flex items-baseline justify-between gap-2">
