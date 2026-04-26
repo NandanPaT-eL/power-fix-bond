@@ -1,8 +1,8 @@
 import { ArrowRight } from "lucide-react";
-import pf22 from "@/assets/pf22-bag.jpeg";
-import pf44 from "@/assets/pf44-bag.jpeg";
-import pf55 from "@/assets/pf55-bag.jpeg";
-import pf111 from "@/assets/pf111-bag.jpeg";
+import pf22 from "@/assets/pf22.png";
+import pf44 from "@/assets/pf44.png";
+import pf55 from "@/assets/pf55.png";
+import pf111 from "@/assets/pf111.png";
 
 const products = [
   {
