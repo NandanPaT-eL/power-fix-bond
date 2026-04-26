@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 
 export const Footer = () => (
-  <footer className="bg-brand-ink text-white">
+  <footer className="bg-[hsl(20_40%_12%)] text-white border-t-4 border-primary">
     <div className="container py-14 grid gap-10 md:grid-cols-4">
       <div className="md:col-span-2">
-        <Logo variant="onDark" />
+        <Logo variant="onDark" className="h-16 md:h-20" />
         <p className="mt-4 text-sm text-white/70 max-w-sm leading-relaxed">
           Power-Fix-O by Mittal Brothers Petrochem — premium polymer-based tile adhesives
           manufactured in Gujarat for floor and wall applications across India.

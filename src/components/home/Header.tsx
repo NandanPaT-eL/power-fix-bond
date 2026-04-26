@@ -15,7 +15,7 @@ export const Header = () => {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-20 md:h-24 items-center justify-between">
         <Link to="/" aria-label="Power-Fix-O home">
           <Logo />
         </Link>
