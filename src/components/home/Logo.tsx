@@ -15,7 +15,7 @@ export const Logo = ({ className = "", variant = "default" }: LogoProps) => {
       alt="Power-Fix-O"
       className={`w-auto select-none ${
         variant === "onDark" || variant === "footer" ? "drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]" : ""
-      } ${className || "h-14 md:h-18"}`}
+      } ${className || "h-12 md:h-18"}`}
       draggable={false}
     />
   );
