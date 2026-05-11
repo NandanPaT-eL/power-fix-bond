@@ -6,9 +6,9 @@ import pf22 from "@/assets/pf22.png";
 import pf44 from "@/assets/pf44.png";
 import pf55 from "@/assets/pf55.png";
 import pf111 from "@/assets/pf111.png";
-import tileGrout from "@/assets/tile-grout-bucket.jpeg";
-import epoxyGrout from "@/assets/epoxy-grout-label.jpeg";
-import whiteGrout from "@/assets/white-grout-1kg.jpeg";
+import tileGrout from "@/assets/tile-grout-bucket.png";
+import epoxyGrout from "@/assets/epoxy-grout-label.png";
+import whiteGrout from "@/assets/white-grout-1kg.png";
 
 type Product = {
   id: string;
