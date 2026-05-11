@@ -6,7 +6,7 @@ export const Footer = () => (
   <footer className="bg-primary text-white">
     <div className="container py-14 grid gap-10 md:grid-cols-4">
       <div className="md:col-span-2">
-        <Logo variant="footer" className="h-16 md:h-20" />
+        <Logo variant="footer" className="h-8 md:h-12" />
         <p className="mt-4 text-sm text-white/70 max-w-sm leading-relaxed">
           Power-Fix-O by Mittal Brothers Petrochem — premium polymer-based tile adhesives
           manufactured in Gujarat for floor and wall applications across India.
