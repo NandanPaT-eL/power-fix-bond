@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 
 export const Footer = () => (
-  <footer className="bg-brand-ink text-white border-t-4 border-primary">
+  <footer className="bg-primary text-white">
     <div className="container py-14 grid gap-10 md:grid-cols-4">
       <div className="md:col-span-2">
         <Logo variant="footer" className="h-16 md:h-20" />
@@ -31,7 +31,7 @@ export const Footer = () => (
         </address>
       </div>
     </div>
-    <div className="border-t border-white/10">
+    <div className="border-t border-white/15">
       <div className="container py-5 text-xs text-white/50 flex flex-col md:flex-row gap-2 md:items-center md:justify-between">
         <p>© {new Date().getFullYear()} Mittal Brothers Petrochem. All rights reserved.</p>
         <p className="flex items-center gap-1.5">
